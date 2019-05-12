@@ -48,6 +48,15 @@
 
 - [Slides](/slides)
 
+- [How to solve CORS problem](express-cors)
+
+- [How to use passport for local login](passport-local-how-to)
+
+- [How to use Winston](express-winston-logger)
+
+- [How to use Socket.IO](express-socket-io)
+
+
 
 ## The Team
 
