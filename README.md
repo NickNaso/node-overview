@@ -1,5 +1,4 @@
 # Node.js overview
----
 
 ## JavaScript references
 
@@ -29,7 +28,6 @@
 
 - [Fastify documentation](https://www.fastify.io/)
 
-
 ## Hapi
 
 - [Hapi documentation](https://hapijs.com/)
@@ -40,7 +38,11 @@
 
 - [C++ Addons - N-API](https://nodejs.org/dist/latest/docs/api/n-api.html)
 
-- [N-API the next API for NAtive Addons](https://youtu.be/-Oniup60Afs)
+- [N-API the next API for Native Addons](https://youtu.be/-Oniup60Afs)
+
+- [N-API: The Next Generation Node.js API is Ready](https://www.youtube.com/watch?v=BrJcsYjp8Nw)
+
+- [New Features Bring Native Add-ons Close To Being On Par With JS Modules](https://medium.com/the-node-js-collection/new-features-bring-native-add-ons-close-to-being-on-par-with-js-modules-cd4f9b8e4b4)
 
 - [Node.js With Steroids](https://youtu.be/KuFSDDggbOs)
 
