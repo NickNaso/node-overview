@@ -6,6 +6,10 @@
 
 - [Exploring ES6](http://exploringjs.com/es6/)
 
+- [Exploring ES2016 and ES2017](http://exploringjs.com/es2016-es2017.html)
+
+- [Exploring ES2018 and ES2019](http://exploringjs.com/es2018-es2019/index.html)
+
 - [Functional JavaScript](https://www.manning.com/books/functional-programming-in-javascript)
 
 ## Node.js documentation and good references
