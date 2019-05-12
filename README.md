@@ -34,10 +34,6 @@
 
 - [Hapi documentation](https://hapijs.com/)
 
-## JavaScript components
-
-- [Examples of reactive element implemented in Vanilla JS](ui-component/readme.md)
-
 ## Native Addons
 
 - [C++ Addons](https://nodejs.org/dist/latest/docs/api/addons.html)
