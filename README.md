@@ -58,7 +58,9 @@
 
 - [How to use Socket.IO](express-socket-io)
 
+- [Monolith application](monolith)
 
+- [Microservices application](microservices)
 
 ## The Team
 
