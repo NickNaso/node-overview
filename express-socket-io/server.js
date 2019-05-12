@@ -34,7 +34,7 @@ module.exports = function createServer() {
   const server = http.Server(app)
   const io = socketIO(server)
 
-  let db = "GDG Campobasso - 16/09/2017"
+  let db = "Socket IO Test"
 
   server.listen(5000, function () {
     console.log("Server started on port 5000")
