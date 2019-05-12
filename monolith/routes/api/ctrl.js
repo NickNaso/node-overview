@@ -1,6 +1,6 @@
 'use strict'
 
-const Post = require('../../dac/Post')
+const Post = require('../../')
 const Hertzy = require('hertzy')
 const fqp = Hertzy.tune('posts')
 

@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-tsw-2017",
+  "name": "monolith",
   "version": "1.0.0",
-  "description": "Example for Introduction to Node.js",
+  "description": "Example of a monolithic application implemented by Node.js",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NickNaso/nodejs-tsw-2017.git"
+    "url": "https://github.com/NickNaso/node-overview.git"
   },
   "author": "Nicola Del Gobbo <nicoladelgobbo@gmail.com>",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",

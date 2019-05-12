@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NickNaso/gdg-cb-node-introduction.git"
+    "url": "https://github.com/NickNaso/node-overview.git"
   },
   "bugs": {
-    "url": "https://github.com/NickNaso/gdg-cb-node-introduction/issues"
+    "url": "https://github.com/NickNaso/node-overview/issues"
   },
   "homepage": "http://www.nacios.it/",
   "dependencies": {

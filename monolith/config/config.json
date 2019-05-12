@@ -5,7 +5,7 @@
             "host": "127.0.0.1",
             "protocol": "mongodb",
             "port": 27017,
-            "name": "tsw-development",
+            "name": "blog-development",
             "user": "",
             "pass": "",
             "server": {
@@ -22,15 +22,6 @@
             "protocol": "http",
             "host": "127.0.0.1",
             "port": 5000
-        },
-        "logs": {
-            "formatDate": "DD-MM-YYYY - HH:mm:ss",
-            "datePattern": "-dd-MM-yyyy.log",
-            "logPath": "./logs",
-            "types": {
-              "console": true,
-              "file": true
-            }
         }
     },
     "production": {
@@ -38,7 +29,7 @@
             "host": "127.0.0.1",
             "protocol": "mongodb",
             "port": 27017,
-            "name": "tsw-production",
+            "name": "blog-production",
             "user": "",
             "pass": "",
             "server": {
@@ -55,15 +46,6 @@
             "protocol": "http",
             "host": "0.0.0.0",
             "port": 8080
-        },
-        "logs": {
-            "formatDate": "DD-MM-YYYY - HH:mm:ss",
-            "datePattern": "-dd-MM-yyyy.log",
-            "logPath": "./logs",
-            "types": {
-              "console": true,
-              "file": true
-            }
         }
     },
     "test": {
@@ -71,7 +53,7 @@
             "host": "127.0.0.1",
             "protocol": "mongodb",
             "port": 27017,
-            "name": "tsw-test",
+            "name": "blog-test",
             "user": "",
             "pass": "",
             "server": {
@@ -88,15 +70,6 @@
             "protocol": "http",
             "host": "127.0.0.1",
             "port": 3001
-        },
-        "logs": {
-            "formatDate": "DD-MM-YYYY - HH:mm:ss",
-            "datePattern": "-dd-MM-yyyy.log",
-            "logPath": "./logs",
-            "types": {
-              "console": true,
-              "file": true
-            }
         }
     }
 }    
