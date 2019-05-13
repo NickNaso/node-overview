@@ -64,7 +64,7 @@
 
 - [Express web application](express-example)
 
-- [Native Addon Examples](addon)
+- [Native addon examples](addon)
 
 ## The Team
 
