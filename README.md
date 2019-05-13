@@ -64,6 +64,8 @@
 
 - [Express web application](express-example)
 
+- [Native Addon Examples](addon)
+
 ## The Team
 
 ### Nicola Del Gobbo
