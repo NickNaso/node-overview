@@ -66,6 +66,8 @@
 
 - [Native addon examples](addon)
 
+- [Stream examples](https://github.com/lmammino/streams-examples)
+
 ## The Team
 
 ### Nicola Del Gobbo
