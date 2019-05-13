@@ -6,7 +6,6 @@ const fqp = Hertzy.tune('posts')
 
 module.exports = {
     
-    
     async getPosts (req, res, next) {
         try {
             const db = req.app.ctx.dbConnection.db
@@ -47,6 +46,6 @@ module.exports = {
         } catch (err) {
             next(err)
         }
-    } 
+    }
 
 }

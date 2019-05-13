@@ -27,7 +27,7 @@ function updateById (db, id, data = {}, opts = {}) {
 }
 
 async function create (db, post = {}) {
-    return await (db.collection(POSTS).insertOne(post)).ops[0]
+    return (await db.collection(POSTS).insertOne(post)).ops[0]
 }
 
 function setupPost (db) {
