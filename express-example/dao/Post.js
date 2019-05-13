@@ -4,8 +4,8 @@ const ObjectId = require('mongodb').ObjectId
 
 const POSTS = 'posts'
 
-function find (db, query = {}) {
-    return db.collection(POSTS).find(query)
+async function find (db, query = {}) {
+    return (await db.collection(POSTS).find(query)).toArray()
 }
 
 function findById (db, id) {
