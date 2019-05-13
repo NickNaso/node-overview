@@ -10,6 +10,7 @@ module.exports = function (app) {
     // SOMETIMES YOU WANT TO DO WITH MAIN EXPRESS APPLICATION
 
     const api = express.Router()
+    api.ctx = app.ctx
 
     api.get('/posts', ctrl.getPosts)
 

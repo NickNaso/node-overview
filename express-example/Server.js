@@ -7,80 +7,51 @@ const time = require('response-time')
 const responsePoweredBy = require('response-powered-by')
 const errorhandler = require('errorhandler')
 const morgan = require('morgan')
-const cfg = require('./config')
 const body = require('body-parser')
 const path = require('path')
 const serve = require('express').static
 const favicon = require('serve-favicon')
 const initSocket = require('./socket')
 const mongoConnect = require('./lib/db')
-
-module.exports = createServer
-
-function onStart() {
-    let port = cfg.server.port
-    let protocol = cfg.server.protocol
-    let host = cfg.server.host
-    console.log(`Server started at ${protocol}://${host}:${port}/`)
-}
-
-function createServer () {
-    const app = express()
-
-    const server = http.Server(app)
-    // Start the web socket
-    initSocket(server)
-
-    app.use(errorhandler())
-
-    // Set express server port
-
-    app.set('port', process.env.PORT || cfg.server.port)
-
-    app.use(time())
-    app.use(compression())
-    app.use(morgan('dev'))
-    app.use(responsePoweredBy("@NickNaso"))
-
-    app.set('view engine', 'ejs');
-    app.engine('ejs', require('ejs').__express);
-    app.set('views', path.join(__dirname, 'views'))
-    
-    app.use(serve(path.join(__dirname, 'public')))
-    app.use(favicon(path.join(__dirname, 'public/favicon.ico')))
-    
-    app.use(body.urlencoded({extended: false, inflate: true}))
-    app.use(body.json({strict: true, inflate: true}))
-
-    // Routes
-    app.use('/', require('./routes/web')(app))
-    app.use('/api', require('./routes/api')(app))
-
-    // Create http server and attach express app on it
-    server.listen(app.get('port'), cfg.server.host, onStart)
-}
+const Post = require('./dao/Post')
+const { DB } = require('./lib/utility')
 
 class Application {
-    constructor() {
+    constructor(cfg = {}) {
         this.cfg = cfg
         this.app = express()
-        this.http = http.Server(app)
+        this.http = http.Server(this.app)
         this.dbConnection = mongoConnect(this.cfg.database)
+        this.ctx = {}
+        this.ctx.cfg = this.cfg
+        this.ctx.dbConnection = this.dbConnection
+        this.app.ctx = this.ctx
     }
-    initDB() {
-
+    async initDB() {
+        await this.dbConnection.connect()
+        const initializers = [Post.setupPost]
+        await DB.setupCollections(this.dbConnection.db, initializers)
     }
-    closeDB() {
-
+    async closeDB() {
+        await this.dbConnection.close()
     }
     initSocket() {
-        
+        // Start the web socket
+        initSocket(this.http)
+    }
+    initExpress() {
+        if (this.cfg.server.proxy) {
+            this.app.enable('trust proxy')
+        } else {     
+            this.app.disable('trust proxy')
+        }    
+        this.app.set('port', this.cfg.server.port)
     }
     initMiddlewares() {
         this.app.use(errorhandler())
 
         // Set express server port
-        this.app.set('port', process.env.PORT || cfg.server.port)
+        this.app.set('port', process.env.PORT || this.cfg.server.port)
 
         this.app.use(time())
         this.app.use(compression())
@@ -102,18 +73,52 @@ class Application {
         this.app.use('/', require('./routes/web')(this.app))
         this.app.use('/api', require('./routes/api')(this.app))
     }
+     // Inizialize http connection and attach express app to it
+     initHttp() {
+        return new Promise((resolve, reject) => {
+            this.http.listen(this.cfg.server.port, this.cfg.server.host, (err) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    const cfg = this.cfg.server
+                    console.log(`Server started at: ${cfg.protocol}://${cfg.host}:${cfg.port}`)
+                    resolve()
+                }
+            })
+        })
+    }
+    // Close http connection
+    closeHttp() {
+        return new Promise((resolve, reject) => {
+            if(this.http) {
+                this.http.close((err) => {
+                    if (err) {
+                        reject(err)
+                    } else {
+                        this.http = null
+                        resolve()
+                    }  
+                })
+            }  
+        })
+    }
 }
 
-module.exports = function Server() {
+module.exports = function createServer(cfg = {}) {
      // Init Application
-    const app = new Application()
+    const app = new Application(cfg)
     // Expose function to start the server
     async function start () {
-
+        await app.initDB()
+        app.initSocket()
+        app.initMiddlewares()
+        app.initSubApp()
+        await app.initHttp()
     }
     // Expose function to stop the server
     async function stop () {
-
+        await app.closeDB()
+        await app.closeHttp()
     }
     return {
         start,
