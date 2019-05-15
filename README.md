@@ -48,8 +48,6 @@
 
 - [New Features Bring Native Add-ons Close To Being On Par With JS Modules](https://medium.com/the-node-js-collection/new-features-bring-native-add-ons-close-to-being-on-par-with-js-modules-cd4f9b8e4b4)
 
-- [Node.js With Steroids](https://youtu.be/KuFSDDggbOs)
-
 ## Workshop materials
 
 - [Slides](/slides)
@@ -67,6 +65,8 @@
 - [Native addon examples](addon)
 
 - [Stream examples](https://github.com/lmammino/streams-examples)
+
+- [Official addon examples](https://github.com/nodejs/node-addon-examples)
 
 ## The Team
 
