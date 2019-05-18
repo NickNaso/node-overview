@@ -48,14 +48,6 @@
 
 - [New Features Bring Native Add-ons Close To Being On Par With JS Modules](https://medium.com/the-node-js-collection/new-features-bring-native-add-ons-close-to-being-on-par-with-js-modules-cd4f9b8e4b4)
 
-- **Tutorials**:
-    - [Starting a new add-on module from scratch](https://napi.inspiredware.com/getting-started/first.html)
-    - [Starting a new add-on module from scratch with ObjectWrap](https://napi.inspiredware.com/getting-started/objectwrap.html)
-    - [Migrating an existing NAN module](https://napi.inspiredware.com/getting-started/migration.html)
-    - [Async Worker](https://napi.inspiredware.com/special-topics/asyncworker.html)
-    - [Node pre-gyp](https://napi.inspiredware.com/special-topics/node-pre-gyp.html)
-
-
 ## Workshop materials
 
 - [Slides](/slides)
@@ -75,6 +67,13 @@
 - [Stream examples](https://github.com/lmammino/streams-examples)
 
 - [Official addon examples](https://github.com/nodejs/node-addon-examples)
+
+- Tutorials:
+    - [Starting a new add-on module from scratch](https://napi.inspiredware.com/getting-started/first.html)
+    - [Starting a new add-on module from scratch with ObjectWrap](https://napi.inspiredware.com/getting-started/objectwrap.html)
+    - [Migrating an existing NAN module](https://napi.inspiredware.com/getting-started/migration.html)
+    - [Async Worker](https://napi.inspiredware.com/special-topics/asyncworker.html)
+    - [Node pre-gyp](https://napi.inspiredware.com/special-topics/node-pre-gyp.html)
 
 ## The Team
 
