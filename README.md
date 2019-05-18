@@ -68,7 +68,7 @@
 
 - [Official addon examples](https://github.com/nodejs/node-addon-examples)
 
-- Tutorials:
+- **Tutorials**:
     - [Starting a new add-on module from scratch](https://napi.inspiredware.com/getting-started/first.html)
     - [Starting a new add-on module from scratch with ObjectWrap](https://napi.inspiredware.com/getting-started/objectwrap.html)
     - [Migrating an existing NAN module](https://napi.inspiredware.com/getting-started/migration.html)
