@@ -74,6 +74,13 @@
 
 - [Official addon examples](https://github.com/nodejs/node-addon-examples)
 
+- **Tutorials**:
+    - [Starting a new add-on module from scratch](https://napi.inspiredware.com/getting-started/first.html)
+    - [Starting a new add-on module from scratch with ObjectWrap](https://napi.inspiredware.com/getting-started/objectwrap.html)
+    - [Migrating an existing NAN module](https://napi.inspiredware.com/getting-started/migration.html)
+    - [Async Worker](https://napi.inspiredware.com/special-topics/asyncworker.html)
+    - [Node pre-gyp](https://napi.inspiredware.com/special-topics/node-pre-gyp.html)
+
 ## The Team
 
 ### Nicola Del Gobbo
