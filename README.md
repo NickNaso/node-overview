@@ -26,6 +26,8 @@
 
 - [Server Scaling in Node.js](https://www.youtube.com/watch?v=w1IzRF6AkuI)
 
+- [Speed, Speed, Speed: JavaScript vs C++ vs WebAssembly](https://skillsmatter.com/skillscasts/13162-keynote-js-vs-webassembly)
+
 ## Express.js
 
 - [Express documentation](http://expressjs.com/)
