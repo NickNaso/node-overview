@@ -22,6 +22,10 @@
 
 - [Node Cookbook - Third Edition](https://www.packtpub.com/web-development/node-cookbook-third-edition)
 
+- [The Node.js Event Loop: Not So Single Threaded](https://www.youtube.com/watch?v=zphcsoSJMvM)
+
+- [Server Scaling in Node.js](https://www.youtube.com/watch?v=w1IzRF6AkuI)
+
 ## Express.js
 
 - [Express documentation](http://expressjs.com/)
